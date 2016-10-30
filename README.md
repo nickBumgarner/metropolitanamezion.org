@@ -4,11 +4,11 @@
 
 To use this code base, you'll need the following installed:
 
-- npm
+- NPM
 - Gulp
 - Browsersync
 - Gulp Sass
-- Node Bourbon
+- Bourbon
 - NEAT
 
 
