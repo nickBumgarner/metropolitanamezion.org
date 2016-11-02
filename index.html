@@ -2,31 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Metropolitan A.M.E. Zion Church | Bergen, New Jersey</title>
+  <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
   <link type="text/css" rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         media="all"/>
   <link type="text/css" rel="stylesheet" href="css/styles.css" media="all"/>
 </head>
 <body>
+<div class="screen"></div>
 <header>
   <div class="wrapper">
-    <section>
+    <section class="logo">
       <a href="/" title="Metropolitan A.M.E. Zion Church">
         <img src="images/logo.png" title="Metropolitan A.M.E. Zion Church"
              alt="Metropolitan A.M.E. Zion Church"/></a>
     </section>
     <section>
       <ul>
-        <li>
+        <li class="hide-for-small">
           <a href="tel:201-332-4447"
              title="Call Metropolitan A.M.E. Church 201-332-4447"><i
               class="fa fa-mobile"></i> 201.332.4447</a></li>
-        <li class="social"><a href="#" title="Metropolitan A.M.E. Church on Facebook"><i
+        <li class="social"><a
+            href="https://www.facebook.com/MetropolitanAMEZJC/"
+            title="Metropolitan A.M.E. Church on Facebook"><i
             class="fa fa-facebook"></i></a></li>
-        <li class="social"><a href="#" title="Metropolitan A.M.E. Church on Twitter"><i
+        <li class="social"><a href="#"
+                              title="Metropolitan A.M.E. Church on Twitter"><i
             class="fa fa-twitter"></i></a></li>
-        <li class="social"><a href="#" title="Metropolitan A.M.E. Church on Instagramk"><i
+        <li class="social"><a href="#"
+                              title="Metropolitan A.M.E. Church on Instagramk"><i
             class="fa fa-instagram"></i></a></li>
       </ul>
     </section>
@@ -35,32 +45,35 @@
 <section id="banner-region"></section>
 <section id="triptych-ctas">
   <div>
-    <i class="fa fa-calendar"></i>
-    <h3>Sunday Schedule</h3>
-    <p>9:30 AM Sunday School<br/>11:00 Morning Worship</p>
-    <br/>
-    <br/>
-    <button class="hollow"><a href="#" title="What to Expect">What to Expect</a>
-    </button>
-  </div>
-  <div>
     <i class="fa fa-map-marker"></i>
     <p>Metropolitan African Methodist <br/>Episcopal Zion Church</p>
     <h3>Our Location</h3>
     <p>597 Bergen Avenue<br/>Jersey City, NJ 07304</p>
     <br/>
     <br/>
-    <button class="hollow"><a href="#" title="What to Expect">Open Map</a>
-    </button>
+    <a class="hollow button modal-link" id="open-map" href="#"
+       title="What to Expect">Open Map</a>
   </div>
+  <div>
+    <i class="fa fa-calendar"></i>
+    <h3>Sunday Schedule</h3>
+    <p>9:30 AM Sunday School<br/>11:00 Morning Worship</p>
+    <br/>
+    <br/>
+    <a class=" button hollow modal-link" href="#" id="what-to-expect"
+       title="What to Expect">What to Expect</a>
+
+  </div>
+
   <div>
     <i class="fa fa-gift"></i>
     <h3>Give Online</h3>
     <p>Make a secure one-time donation towards the work of our church.</p>
     <br/>
     <br/>
-    <button class="hollow"><a href="#" title="What to Expect">Donate</a>
-    </button>
+    <a class="hollow button" target="_blank"
+       href="https://www.paypal.com/donate/?token=UFzhVIxVe5M7PJIHRS_gCPvp-mnXRi1hQUtFpQnPIGjFbeEueZblwj8Hj7AeLLt9D2nro0">Donate</a>
+
   </div>
 </section>
 <section id="about-mame">
@@ -74,15 +87,33 @@
 </section>
 <section id="grid-blocks">
   <div class="wrapper">
-    <section class="half">
-      <div class="half"><img src="images/pastor.jpg"/></div>
-      <div class="half"><img src="images/announcements.jpg"/></div>
-      <div class="half"><img src="images/mobile.jpg"/></div>
-      <div class="half"><img src="images/original-logo.jpg"/></div>
+    <section class="half link-bottom-right">
+      <a href="#" title="Our Story" class="modal-link" id="our-story"><span
+          class="abs bottom right text-center">Our Story</span><img
+          src="images/church.jpg"/></a>
     </section>
     <section class="half">
-      <img src="images/church.jpg"/>
+      <div class="half link-top"><a href="#"
+                                    title="Our Pastor" class="modal-link"
+                                    id="our-pastor"><span
+          class="abs top left right">Our Pastor</span><img
+          src="images/pastor.jpg"/></a></div>
+      <div class="half link-top"><a href="#" title="Announcements"
+                                    class="modal-link" id="announcements"><span
+          class="abs top left right">Announcements</span><img
+          src="images/announcements.jpg"/></a></div>
+      <div class="half link-bottom"><a href="#" title="Our Pastor"
+                                       class="modal-link"
+                                       id="online-giving"><span
+          class="abs bottom left right">Online Giving</span><img
+          src="images/mobile.jpg"/></a></div>
+      <div class="half link-bottom"><a href="#" title="Our Pastor"
+                                       class="modal-link"
+                                       id="denomination"><span
+          class="abs bottom left right">Our Denomination</span><img
+          src="images/original-logo.jpg"/></a></div>
     </section>
+
   </div>
 </section>
 <footer class="text-center">
@@ -91,14 +122,13 @@
 
       <h4>Contact Us</h4>
       <p><strong>Metropolitan African Methodist Episcopal Zion Church</strong>
+        <br/>597 Bergen Avenue | Jersey City, NJ 07304
+        <br/><a href="tel:202-332-4447"
+                title="Call Us 202-332-4447">202.332.4447</a>
+        <br/><a href="mailto:connect@metropolitanamezion.org"
+                title="E-Mail Us at connect@metropolitanamezion.org">connect@metropolitanamezion.org</a>
       </p>
-      <p>597 Bergen avenue | Jersey City, NJ 07304</p>
-      <p><a href="tel:202-332-4447"
-            title="Call Us 202-332-4447">202.332.4447</a></p>
-      <p><a href="mailto:connect@metropolitanamezion.org"
-            title="E-Mail Us at connect@metropolitanamezion.org">connect@metropolitanamezion.org</a>
-      </p>
-      <p>
+      <p class="social">
         <a href="#"><i class="fa fa-facebook"></i></a>
         <a href="#"><i class="fa fa-twitter"></i></a>
         <a href="#"><i class="fa fa-instagram"></i></a>
@@ -108,6 +138,122 @@
 </footer>
 <div class="text-center footer-bottom"><p>
   Metropolitan A.M.E. Zion Church ©2016 All rights reserved.</p>
+</div>
+
+
+<!--
+Modal windows are kept here and can be called by clicking on the appropriate links.
+Be sure that the modal-window class matches the ID of the button used to call it.
+Example:
+
+MODAL TRIGGER (must have modal-link class and a unique ID)
+<a href="#" class="modal-link" id="what-to-expect" title="What to Expect">What to Expect</a>
+
+
+MODAL CONTENT (class must match the ID of the modal trigger link and modal-window class should be here too).
+<div class="what-to-expect modal-window">
+  <span class="close-button abs top right"><i class="fa fa-close"></i></span>
+</div>
+-->
+<div class="what-to-expect modal-window">
+  <span class="close-button abs top right"><i class="fa fa-close"></i></span>
+  <h2>What to Expect</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut sem tempus,
+    feugiat ipsum at, bibendum odio. Nullam faucibus enim velit, non accumsan
+    ante porttitor et. Sed convallis quam vitae nisi mattis iaculis. Duis
+    elementum dignissim augue et ullamcorper. Pellentesque fringilla nunc vel
+    ipsum posuere, vehicula pellentesque quam interdum. Curabitur at ante diam.
+    Praesent quis tortor sit amet mauris vulputate dictum. Curabitur molestie
+    libero lorem, at sodales arcu cursus id. Suspendisse et sem sed nisl dictum
+    placerat ut sit amet justo. Cras porttitor rutrum massa, ut congue metus
+    commodo sed. Phasellus tincidunt odio sit amet est tempus suscipit.</p>
+</div>
+
+<div class="open-map modal-window">
+  <span class="close-button abs top right"><i class="fa fa-close"></i></span>
+  <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.8521123349897!2d-74.07516868371918!3d40.72127197933098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250d6e42039d1%3A0xbdc3a5dd89a0afe6!2s597+Bergen+Ave%2C+Jersey+City%2C+NJ+07304!5e0!3m2!1sen!2sus!4v1478048859747"
+      width="100%" height="450" frameborder="0" style="border:0"
+      allowfullscreen></iframe>
+</div>
+<div class="donate modal-window">
+  <span class="close-button abs top right"><i class="fa fa-close"></i></span>
+  <h2>What to Expect</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut sem tempus,
+    feugiat ipsum at, bibendum odio. Nullam faucibus enim velit, non accumsan
+    ante porttitor et. Sed convallis quam vitae nisi mattis iaculis. Duis
+    elementum dignissim augue et ullamcorper. Pellentesque fringilla nunc vel
+    ipsum posuere, vehicula pellentesque quam interdum. Curabitur at ante diam.
+    Praesent quis tortor sit amet mauris vulputate dictum. Curabitur molestie
+    libero lorem, at sodales arcu cursus id. Suspendisse et sem sed nisl dictum
+    placerat ut sit amet justo. Cras porttitor rutrum massa, ut congue metus
+    commodo sed. Phasellus tincidunt odio sit amet est tempus suscipit.</p>
+</div>
+<div class="our-pastor modal-window">
+  <span class="close-button abs top right"><i class="fa fa-close"></i></span>
+  <h2>Reverend Nathaniel B. Legay</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut sem tempus,
+    feugiat ipsum at, bibendum odio. Nullam faucibus enim velit, non accumsan
+    ante porttitor et. Sed convallis quam vitae nisi mattis iaculis. Duis
+    elementum dignissim augue et ullamcorper. Pellentesque fringilla nunc vel
+    ipsum posuere, vehicula pellentesque quam interdum. Curabitur at ante diam.
+    Praesent quis tortor sit amet mauris vulputate dictum. Curabitur molestie
+    libero lorem, at sodales arcu cursus id. Suspendisse et sem sed nisl dictum
+    placerat ut sit amet justo. Cras porttitor rutrum massa, ut congue metus
+    commodo sed. Phasellus tincidunt odio sit amet est tempus suscipit.</p>
+</div>
+<div class="announcements modal-window">
+  <span class="close-button abs top right"><i class="fa fa-close"></i></span>
+  <h2>Announcements</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut sem tempus,
+    feugiat ipsum at, bibendum odio. Nullam faucibus enim velit, non accumsan
+    ante porttitor et. Sed convallis quam vitae nisi mattis iaculis. Duis
+    elementum dignissim augue et ullamcorper. Pellentesque fringilla nunc vel
+    ipsum posuere, vehicula pellentesque quam interdum. Curabitur at ante diam.
+    Praesent quis tortor sit amet mauris vulputate dictum. Curabitur molestie
+    libero lorem, at sodales arcu cursus id. Suspendisse et sem sed nisl dictum
+    placerat ut sit amet justo. Cras porttitor rutrum massa, ut congue metus
+    commodo sed. Phasellus tincidunt odio sit amet est tempus suscipit.</p>
+</div>
+<div class="denomination modal-window">
+  <span class="close-button abs top right"><i class="fa fa-close"></i></span>
+  <h2>Our Denomination</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut sem tempus,
+    feugiat ipsum at, bibendum odio. Nullam faucibus enim velit, non accumsan
+    ante porttitor et. Sed convallis quam vitae nisi mattis iaculis. Duis
+    elementum dignissim augue et ullamcorper. Pellentesque fringilla nunc vel
+    ipsum posuere, vehicula pellentesque quam interdum. Curabitur at ante diam.
+    Praesent quis tortor sit amet mauris vulputate dictum. Curabitur molestie
+    libero lorem, at sodales arcu cursus id. Suspendisse et sem sed nisl dictum
+    placerat ut sit amet justo. Cras porttitor rutrum massa, ut congue metus
+    commodo sed. Phasellus tincidunt odio sit amet est tempus suscipit.</p>
+</div>
+<div class="online-giving modal-window">
+  <span class="close-button abs top right"><i class="fa fa-close"></i></span>
+  <h2>Online Giving</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut sem tempus,
+    feugiat ipsum at, bibendum odio. Nullam faucibus enim velit, non accumsan
+    ante porttitor et. Sed convallis quam vitae nisi mattis iaculis. Duis
+    elementum dignissim augue et ullamcorper. Pellentesque fringilla nunc vel
+    ipsum posuere, vehicula pellentesque quam interdum. Curabitur at ante diam.
+    Praesent quis tortor sit amet mauris vulputate dictum. Curabitur molestie
+    libero lorem, at sodales arcu cursus id. Suspendisse et sem sed nisl dictum
+    placerat ut sit amet justo. Cras porttitor rutrum massa, ut congue metus
+    commodo sed. Phasellus tincidunt odio sit amet est tempus suscipit.</p>
+</div>
+
+<div class="our-story modal-window">
+  <span class="close-button abs top right"><i class="fa fa-close"></i></span>
+  <h2>Our Story</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut sem tempus,
+    feugiat ipsum at, bibendum odio. Nullam faucibus enim velit, non accumsan
+    ante porttitor et. Sed convallis quam vitae nisi mattis iaculis. Duis
+    elementum dignissim augue et ullamcorper. Pellentesque fringilla nunc vel
+    ipsum posuere, vehicula pellentesque quam interdum. Curabitur at ante diam.
+    Praesent quis tortor sit amet mauris vulputate dictum. Curabitur molestie
+    libero lorem, at sodales arcu cursus id. Suspendisse et sem sed nisl dictum
+    placerat ut sit amet justo. Cras porttitor rutrum massa, ut congue metus
+    commodo sed. Phasellus tincidunt odio sit amet est tempus suscipit.</p>
 </div>
 </body>
 </html>
