@@ -141,6 +141,8 @@ header {
       @include span-columns(4);
       + section {
         @include span-columns(8);
+        margin-top: 1.25rem;
+
       }
     }
   }
@@ -218,12 +220,8 @@ section#banner-region {
 //Theme main callout sections of the site
 section#triptych-ctas {
   margin-top: -5rem;
+  @include outer-container();
 
-  @include media($tablet-up) {
-    @include span-columns(10);
-    @include shift(1);
-    @include omega();
-  }
   > div {
 
     @include span-columns(4);
@@ -332,8 +330,25 @@ section#about-mame {
     > .half {
       margin-top: 0;
       @include omega();
+
     }
 
+    //Make second and third grid blocks have a different background color
+    @include media($tablet-up) {
+      .half {
+        &:nth-child(2), &:nth-child(3) {
+          a {
+            span {
+              background-color: rgba(64, 42, 126, .25);
+            }
+            &:hover span {
+              background-color: rgba(193, 198, 215, .8);
+
+            }
+          }
+        }
+      }
+    }
   }
 
   @include media($tablet-up) {
@@ -350,7 +365,7 @@ section#about-mame {
     display: block;
     span {
       width: 100%;
-      background-color: rgba(255, 255, 255, .2);
+      background-color: rgba(255, 255, 255, .5);
       color: #402a7e;
       z-index: 1;
       font-size: 20px;
@@ -371,11 +386,14 @@ section#about-mame {
       width: 33%;
       text-align: center;
       background-color: white;
+      @include media($mobile) {
+        width: 70%;
+      }
     }
-  &:hover span {
-    background-color:rgba(255,255,255,.9);
+    &:hover span {
+      background-color: rgba(255, 255, 255, .9);
 
-  }
+    }
   }
 }
 
