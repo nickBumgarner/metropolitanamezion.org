@@ -28,8 +28,7 @@ gulp.task("browserSync", function() {
 gulp.task("sass", function() {
   gulp.src("scss/**/*.scss")
       .pipe(sass({
-        includePaths: bourbon,
-        includePaths: neat
+	    includePaths: [].concat(bourbon, neat)  
       }))
       .pipe(gulp.dest("css"))
       .pipe(browserSync.reload({
